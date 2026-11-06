@@ -8,12 +8,16 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Mukta+Malar:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-NBN478XN"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-</script>
+  
+  <!-- Google Tag Manager / Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-NBN478XN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'GTM-NBN478XN');
+  </script>
+
   <style>
     body {
       font-family: 'Mukta Malar', system-ui, -apple-system, sans-serif;
@@ -62,7 +66,7 @@
       <div id="resultCard" class="hidden mt-6 bg-gradient-to-br from-indigo-50 to-blue-50 border border-indigo-100 rounded-xl p-6">
         <div class="flex items-center space-x-2 text-indigo-700 font-semibold text-sm">
           <span>📅</span>
-          <span>முன்பதிவு திறக்கும் நாள்:</span>
+          <span>முன்பதிவு தொடங்கும் நாள்:</span>
         </div>
         
         <div id="openDateTamil" class="text-2xl font-bold text-indigo-950 mt-1"></div>
@@ -71,7 +75,7 @@
         <div class="mt-4 pt-4 border-t border-indigo-100/80 flex flex-wrap items-center justify-between gap-2">
           <div class="flex items-center space-x-1.5 text-sm font-semibold text-slate-700">
             <span>⏰ நேரம்:</span>
-            <span class="bg-white px-2.5 py-1 rounded-md border border-indigo-200 text-indigo-900">காலை 08:00 AM (IST)</span>
+            <span class="bg-white px-2.5 py-1 rounded-md border border-indigo-200 text-indigo-900 font-bold">காலை 08:00 AM (IST)</span>
           </div>
 
           <div id="countdownBadge" class="text-xs font-semibold px-2.5 py-1 rounded-md bg-emerald-100 text-emerald-800 border border-emerald-200">
@@ -79,15 +83,26 @@
           </div>
         </div>
 
-        <!-- Google Calendar Button -->
-        <div class="mt-5">
+        <!-- Action Buttons -->
+        <div class="mt-5 grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <!-- WhatsApp Share Button -->
+          <a 
+            id="whatsappBtn" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="inline-flex items-center justify-center px-4 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white font-medium text-sm rounded-lg transition-colors shadow-sm cursor-pointer"
+          >
+            💬 WhatsApp-ல் பகிரவும்
+          </a>
+
+          <!-- Google Calendar Button -->
           <a 
             id="calendarBtn" 
             target="_blank" 
             rel="noopener noreferrer"
-            class="inline-flex items-center justify-center w-full px-4 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white font-medium text-sm rounded-lg transition-colors shadow-sm"
+            class="inline-flex items-center justify-center px-4 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white font-medium text-sm rounded-lg transition-colors shadow-sm"
           >
-            🔔 Google Calendar-இல் Reminder சேர்க்க
+            🔔 Calendar-ல் Reminder சேர்க்க
           </a>
         </div>
       </div>
@@ -113,20 +128,96 @@
 
     </div>
 
+    <!-- IRCTC Official Link Button -->
+    <div class="mt-4 text-center">
+      <a href="https://www.irctc.co.in/nget/train-search" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-2 text-xs sm:text-sm font-semibold text-indigo-700 bg-indigo-50 hover:bg-indigo-100 px-4 py-2.5 rounded-lg border border-indigo-200 transition">
+        <span>🔗 அதிகாரப்பூர்வ IRCTC தளத்தில் டிக்கெட் புக் செய்ய இங்கே கிளிக் செய்யவும்</span>
+      </a>
+    </div>
+
     <!-- Info Table -->
     <div class="mt-6 bg-white rounded-xl p-5 border border-slate-200 shadow-sm text-sm text-slate-600 space-y-2">
       <h3 class="font-semibold text-slate-800 text-base">முக்கிய வழிகாட்டுதல்கள்:</h3>
       <ul class="list-disc list-inside space-y-1 text-xs sm:text-sm text-slate-600">
         <li>பொது முன்பதிவு (General Quota) பயண தேதிக்கு <strong>60 நாட்களுக்கு முன்</strong> காலை 08:00 மணிக்குத் தொடங்கும்.</li>
-        <li>தட்கல் (Tatkal) முன்பதிவு பயண நாளுக்கு 1 நாள் முன்பு தொடங்கும்: <strong>AC பெட்டிகளுக்கு காலை 10:00 மணிக்கும்</strong>, <strong>Non-AC பெட்டிகளுக்கு காலை 11:00 மணிக்கும்</strong> தொடங்கும்.</li>
+        <li>காலை 8:00 மணிக்கு முன்பாகவே IRCTC கணக்கில் உள்நுழைந்து (Login) பயணியர் விவரங்களை தயார் நிலையில் வைத்திருப்பது விரைவான முன்பதிவுக்கு உதவும்.</li>
       </ul>
     </div>
   </main>
 
-  <!-- Footer -->
-  <footer class="py-4 text-center text-xs text-slate-400">
-    Railway Booking Window Calculator &bull; 60 Days ARP
+  <!-- Legal & Informational Footer -->
+  <footer class="bg-white border-t border-slate-200 py-6 px-4 mt-8">
+    <div class="max-w-2xl mx-auto text-center">
+      <div class="flex justify-center flex-wrap gap-4 text-xs sm:text-sm font-medium text-slate-600 mb-3">
+        <button type="button" onclick="openModal('aboutModal')" class="hover:text-indigo-600 transition">About Us</button>
+        <span>&bull;</span>
+        <button type="button" onclick="openModal('contactModal')" class="hover:text-indigo-600 transition">Contact Us</button>
+        <span>&bull;</span>
+        <button type="button" onclick="openModal('privacyModal')" class="hover:text-indigo-600 transition">Privacy Policy</button>
+        <span>&bull;</span>
+        <button type="button" onclick="openModal('disclaimerModal')" class="hover:text-indigo-600 transition">Terms & Disclaimer</button>
+      </div>
+      <p class="text-xs text-slate-400">
+        &copy; 2026 trainticketcalc.in - All Rights Reserved. (Non-official Indian Railways utility)
+      </p>
+    </div>
   </footer>
+
+  <!-- 1. About Us Modal -->
+  <div id="aboutModal" class="fixed inset-0 bg-slate-900/60 hidden z-50 flex items-center justify-center p-4">
+    <div class="bg-white rounded-2xl max-w-lg w-full max-h-[85vh] overflow-y-auto p-6 shadow-xl relative text-left">
+      <button type="button" onclick="closeModal('aboutModal')" class="absolute top-4 right-4 text-slate-400 hover:text-slate-700 text-xl font-bold">&times;</button>
+      <h2 class="text-lg font-bold text-slate-800 border-b border-slate-100 pb-2 mb-3">About Us</h2>
+      <div class="text-xs sm:text-sm text-slate-600 space-y-2.5 leading-relaxed">
+        <p>Welcome to <strong>trainticketcalc.in</strong>, a free online utility tool designed to help Indian Railway passengers calculate their Advance Reservation Period (ARP) booking opening dates accurately.</p>
+        <p>Planning train journeys during peak festival seasons and holidays can be challenging. Our objective is to make ticket planning simple, fast, and accessible for everyone by providing precise booking schedules based on official IRCTC reservation rules.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. Contact Us Modal -->
+  <div id="contactModal" class="fixed inset-0 bg-slate-900/60 hidden z-50 flex items-center justify-center p-4">
+    <div class="bg-white rounded-2xl max-w-lg w-full max-h-[85vh] overflow-y-auto p-6 shadow-xl relative text-left">
+      <button type="button" onclick="closeModal('contactModal')" class="absolute top-4 right-4 text-slate-400 hover:text-slate-700 text-xl font-bold">&times;</button>
+      <h2 class="text-lg font-bold text-slate-800 border-b border-slate-100 pb-2 mb-3">Contact Us</h2>
+      <div class="text-xs sm:text-sm text-slate-600 space-y-2.5 leading-relaxed">
+        <p>Have questions, suggestions, or feedback regarding the calculator? We would love to hear from you!</p>
+        <div class="bg-slate-50 border border-slate-200 rounded-lg p-3 my-2">
+          <p class="font-semibold text-slate-700">Official Communication Email:</p>
+          <p class="text-indigo-600 select-all">yogalakshmi786@gmail.com</p>
+        </div>
+        <p>We typically respond to all genuine user inquiries within 24 to 48 business hours.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. Privacy Policy Modal -->
+  <div id="privacyModal" class="fixed inset-0 bg-slate-900/60 hidden z-50 flex items-center justify-center p-4">
+    <div class="bg-white rounded-2xl max-w-lg w-full max-h-[85vh] overflow-y-auto p-6 shadow-xl relative text-left">
+      <button type="button" onclick="closeModal('privacyModal')" class="absolute top-4 right-4 text-slate-400 hover:text-slate-700 text-xl font-bold">&times;</button>
+      <h2 class="text-lg font-bold text-slate-800 border-b border-slate-100 pb-2 mb-3">Privacy Policy</h2>
+      <div class="text-xs sm:text-sm text-slate-600 space-y-2.5 leading-relaxed">
+        <p>At <strong>trainticketcalc.in</strong>, the privacy of our visitors is extremely important to us. This policy document outlines the types of information collected and recorded by trainticketcalc.in and how we use it.</p>
+        <h4 class="font-semibold text-slate-700 pt-1">Log Files & Analytics</h4>
+        <p>Like many web utilities, trainticketcalc.in utilizes standard server logs and analytical metrics (such as IP addresses, browser types, and date/time stamps) solely to analyze visitor trends and optimize server performance. None of this data is linked to personally identifiable information.</p>
+        <h4 class="font-semibold text-slate-700 pt-1">Cookies & Third-Party Advertising</h4>
+        <p>Our website may use cookies to improve user experience. Third-party advertising partners, such as Google AdSense, may also use cookies and web beacons (including the DoubleClick DART cookie) to serve relevant advertisements based on users' visits to this and other websites across the Internet.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. Terms & Disclaimer Modal -->
+  <div id="disclaimerModal" class="fixed inset-0 bg-slate-900/60 hidden z-50 flex items-center justify-center p-4">
+    <div class="bg-white rounded-2xl max-w-lg w-full max-h-[85vh] overflow-y-auto p-6 shadow-xl relative text-left">
+      <button type="button" onclick="closeModal('disclaimerModal')" class="absolute top-4 right-4 text-slate-400 hover:text-slate-700 text-xl font-bold">&times;</button>
+      <h2 class="text-lg font-bold text-slate-800 border-b border-slate-100 pb-2 mb-3">Terms & Disclaimer</h2>
+      <div class="text-xs sm:text-sm text-slate-600 space-y-2.5 leading-relaxed">
+        <p><strong>Non-Affiliation Disclaimer:</strong> <strong>trainticketcalc.in</strong> is an independent digital tool. We are <strong>NOT</strong> affiliated, associated, authorized, endorsed by, or in any way officially connected with the Indian Railways, IRCTC (Indian Railway Catering and Tourism Corporation), or the Ministry of Railways, Government of India.</p>
+        <p><strong>Official Portal:</strong> The official portal for Indian Railway bookings is <a href="https://www.irctc.co.in" target="_blank" rel="noopener noreferrer" class="text-indigo-600 underline">www.irctc.co.in</a>.</p>
+        <p><strong>Accuracy of Schedules:</strong> While all calculations adhere to standard ARP rules, railway administrative policies, quota guidelines, or train timings can be modified by the competent authorities without prior notice. Passengers are encouraged to cross-verify vital booking dates with official railway inquiry platforms.</p>
+      </div>
+    </div>
+  </div>
 
   <script>
     const travelDateInput = document.getElementById("travelDate");
@@ -134,6 +225,7 @@
     const openDateTamil = document.getElementById("openDateTamil");
     const openDateEnglish = document.getElementById("openDateEnglish");
     const countdownBadge = document.getElementById("countdownBadge");
+    const whatsappBtn = document.getElementById("whatsappBtn");
     const calendarBtn = document.getElementById("calendarBtn");
 
     // இன்றைய தேதியை உள்ளீட்டின் தொடக்கத் தேதியாக அமைத்தல்
@@ -147,23 +239,21 @@
         return;
       }
 
-      // பயணத் தேதி
+      // 1. பயணத் தேதி
       const [year, month, day] = selectedDateStr.split("-").map(Number);
       const travelDate = new Date(year, month - 1, day);
 
-      // 60 நாட்களைக் கழித்தல்
+      // 2. பொது முன்பதிவு: 60 நாட்களைக் கழித்தல்
       const openDate = new Date(travelDate);
       openDate.setDate(travelDate.getDate() - 60);
 
-      // தமிழ் வடிவம்
       const tamilOptions = { weekday: "long", year: "numeric", month: "long", day: "numeric" };
       openDateTamil.textContent = openDate.toLocaleDateString("ta-IN", tamilOptions);
 
-      // ஆங்கில வடிவம்
       const englishOptions = { weekday: "long", year: "numeric", month: "short", day: "numeric" };
       openDateEnglish.textContent = openDate.toLocaleDateString("en-IN", englishOptions);
 
-      // Countdown கணக்கீடு (தொடக்க நாளுக்கும் இன்றைய நாளுக்கும் உள்ள இடைவெளி)
+      // 3. Countdown கணக்கீடு
       const openDateMorning = new Date(openDate.getFullYear(), openDate.getMonth(), openDate.getDate(), 8, 0, 0);
       const diffTime = openDateMorning - new Date();
       const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
@@ -179,9 +269,17 @@
         countdownBadge.textContent = `இன்னும் ${diffDays} நாட்களில் திறக்கும்`;
       }
 
-      // Google Calendar நிகழ்வு இணைப்பு உருவாக்குதல்
+      // 4. WhatsApp Share செய்தி உருவாக்குதல்
+      const shareText = encodeURIComponent(
+        `🚆 ரயில் பயணத் தேதி: ${travelDate.toLocaleDateString("ta-IN", {day: "numeric", month: "short", year: "numeric"})}\n` +
+        `📅 முன்பதிவு தொடங்கும் நாள்: ${openDate.toLocaleDateString("ta-IN", {day: "numeric", month: "short", year: "numeric"})} (காலை 8:00 AM)\n\n` +
+        `நீங்களும் உங்கள் பயண தேதிக்கான முன்பதிவு நாளை உடனே கணக்கிட:\nhttps://trainticketcalc.in`
+      );
+      whatsappBtn.href = `https://api.whatsapp.com/send?text=${shareText}`;
+
+      // 5. Google Calendar நிகழ்வு இணைப்பு உருவாக்குதல்
       const startIso = formatCalendarTime(openDateMorning);
-      const endIso = formatCalendarTime(new Date(openDateMorning.getTime() + 30 * 60000)); // 30 நிமிடம்
+      const endIso = formatCalendarTime(new Date(openDateMorning.getTime() + 30 * 60000));
       const eventTitle = encodeURIComponent("Train Ticket Booking Opens (IRCTC 8:00 AM)");
       const eventDetails = encodeURIComponent(`Train ticket booking for journey on ${travelDate.toDateString()} opens today at 8:00 AM.`);
       calendarBtn.href = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${eventTitle}&dates=${startIso}/${endIso}&details=${eventDetails}`;
@@ -202,6 +300,33 @@
     }
 
     travelDateInput.addEventListener("change", (e) => calculateBookingDate(e.target.value));
+
+    // Modal Popup செயல்பாடுகள்
+    function openModal(modalId) {
+      const modal = document.getElementById(modalId);
+      if (modal) {
+        modal.classList.remove("hidden");
+        document.body.classList.add("overflow-hidden");
+      }
+    }
+
+    function closeModal(modalId) {
+      const modal = document.getElementById(modalId);
+      if (modal) {
+        modal.classList.add("hidden");
+        document.body.classList.remove("overflow-hidden");
+      }
+    }
+
+    window.addEventListener("click", (e) => {
+      const modals = ["aboutModal", "contactModal", "privacyModal", "disclaimerModal"];
+      modals.forEach((id) => {
+        const modal = document.getElementById(id);
+        if (e.target === modal) {
+          closeModal(id);
+        }
+      });
+    });
   </script>
 </body>
 </html>
